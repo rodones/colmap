@@ -67,6 +67,8 @@ void Workspace::Load(const std::vector<std::string>& image_names) {
   normal_maps_.resize(num_images);
 
   auto LoadWorkspaceData = [&, this](const int image_idx) {
+    std::cout << "Loading image " << image_idx << "/" << num_images << std::endl;
+
     const size_t width = model_.images.at(image_idx).GetWidth();
     const size_t height = model_.images.at(image_idx).GetHeight();
 
